@@ -1,0 +1,7 @@
+episodes: 5000
+avg_steps: 129.481
+std_steps: 66.82114365229017
+avg_return: -193.1938
+std_return: 120.61975891851219
+min_return: -614.0
+max_return: 15.0
