@@ -1,6 +1,4 @@
-# CSCN8020 – Assignment 2 (Full, Step-by-Step)
-
-This package gives you **ready-to-run** scripts to complete the assignment on Taxi-v3 using **Q-Learning** and **DQN**, plus an auto-generated Markdown report with figures.
+# CSCN8020 – Assignment 2 
 
 ## 1) Setup
 
@@ -51,28 +49,6 @@ This will create:
 - `out/dqn/*/returns.png` and `steps.png`
 - `report/Assignment2_Report.md` – Ready to convert to PDF
 
-## 4) Convert the Markdown Report to PDF
 
-Use VS Code Markdown PDF extension, or:
-```bash
-pip install markdown pdfkit
-python - <<'PY'
-import markdown, pdfkit, pathlib
-src = pathlib.Path("report/Assignment2_Report.md")
-html = markdown.markdown(src.read_text(), extensions=["tables"])
-(pathlib.Path("report")/"Assignment2_Report.html").write_text("<meta charset='utf-8'>"+html)
-pdfkit.from_file("report/Assignment2_Report.html", "report/Assignment2_Report.pdf")
-print("Saved: report/Assignment2_Report.pdf")
-PY
-```
 
-## 5) What to Submit
 
-- **Code** folder (these scripts).
-- **PDF report** (`Assignment2_Report.pdf`) with:
-  - Total episodes, steps per episode, average return per episode (with plots).
-  - Clear commentary on how **α** and **ϵ** influenced learning.
-  - Your **chosen best** α–ϵ combo, re-run results, and comparison.
-  - A short section comparing Q-Learning vs DQN on Taxi-v3.
-
-Good luck — this setup is designed to help you score **full marks**.
